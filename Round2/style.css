@@ -1,0 +1,199 @@
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 37);
+}
+
+h1 {
+    text-align: center;
+    color: yellow;
+}
+
+.playerTurn {
+    text-align: center;
+    font-size: 2em;
+    color: yellow;
+}
+
+.jeopardyBoard {
+    display: grid;
+    grid-template-rows: 5em 5em 5em 5em 5em 5em;
+    grid-template-columns: 10em 10em 10em 10em 10em 10em;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+.boardCategory {
+    background-color: grey !important;
+}
+
+.boardCategory, .board100, .board200, .board300, .board400, .board500 {
+    display: flex;
+    border: 1px solid;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    
+    /* padding-top: 50%; */
+}
+
+.textbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.guessPassButton {
+    display: grid;
+    grid-template-columns: 10em 10em;
+    grid-template-rows: 5em 5em;
+    justify-content: center;
+    gap: 10px;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.guessButton {
+    border: 1px solid black !important;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+
+.passButton {
+    border: 1px solid black;
+    text-align: center !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
+
+.score {
+    display: grid;
+    /* border: 2px solid black; */
+    grid-template-columns: 9em 9em;
+    grid-template-rows: 5em;
+    gap: 45em;
+    justify-content: center;
+}
+
+.player1Score, .player2Score {
+    display: flex;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+}
+
+.nextRound {
+    border: 1.5px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 49em;
+    margin-top: 2em ;
+    margin-left: 90em;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    background-color: yellow;
+    animation-name: playButton;
+    animation-duration: 20s;
+}
+
+.nextRoundText {
+    color: black;
+}
+
+footer {
+    text-align: center;
+    margin-top: 8em;
+    color: yellow;
+}
+
+.pop-up {
+    position: absolute;
+    width: 30em;
+    border-radius: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -50%;
+    left: 40.5%;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.questionDisplay {
+    visibility: hidden;
+}
+
+.display {
+    top: 25%;
+    visibility: visible;
+}
+
+.answered {
+    text-decoration: line-through;
+    pointer-events: none;
+    color: gray;
+}
+
+#nextRound {
+    pointer-events: none;
+}
+
+#guess, #pass {
+    pointer-events: none;
+}
+
+
+@media (max-width: 600px) {
+
+    .jeopardyBoard {
+        display: grid;
+    grid-template-rows: 2em 2em 2em 2em 2em 2em;
+    grid-template-columns: 4em 4em 4em 4em 4em 4em;
+    justify-content: center;
+    gap: 5px;
+    }
+
+    .boardCategory {
+        font-size: 0.725em;
+    }
+
+    .score {
+        display: grid;
+    grid-template-columns: 8em 8em;
+    grid-template-rows: 3em;
+    gap: 6em;
+    justify-content: center;
+    }
+
+    .nextRound {
+        margin-left: 16em;
+        margin-right: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        margin-top: 10em;
+    }
+
+    .guessPassButton {
+        display: grid;
+    grid-template-columns: 7em 7em;
+    grid-template-rows: 3em 3em;
+    justify-content: center;
+    gap: 8em;
+    margin-bottom: -5em;
+    }
+    }
+
+    @keyframes playButton {
+        from {background-color: yellow;}
+        to {background-color: orange;}
+    }

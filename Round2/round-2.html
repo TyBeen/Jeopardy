@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jeopardy</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body onload="alertPlayer(), start()">
+    <h1>Second Round</h1>
+
+    <div class="playerTurn">Player Turn</div>
+    <br>
+    <section class="jeopardyBoard">
+
+        <div class="boardCategory">CATEGORY</div>
+        <div class="boardCategory">CATEGORY</div>
+        <div class="boardCategory">CATEGORY</div>
+        <div class="boardCategory">CATEGORY</div>
+        <div class="boardCategory">CATEGORY</div>
+        <div class="boardCategory">CATEGORY</div>
+
+        <div class="board100">
+          <a href="#" class="board100"  id="question-0" onclick="displayPopUp(), displayGeneralQuestion(0)">400</a>
+        </div>
+        <div class="board100">
+          <a href="#" id="question-5" onclick="displayPopUp(), displayGeneralQuestion(5)">400</a>
+        </div>
+        <div class="board100">
+          <a href="#" id="question-10" onclick="displayPopUp(), displayGeneralQuestion(10)">400</a>
+        </div>
+        <div class="board100">
+          <a href="#" id="question-15" onclick="displayPopUp(), displayGeneralQuestion(15)">400</a>
+        </div>
+        <div class="board100">
+          <a href="#" id="question-20" onclick="displayPopUp(), displayGeneralQuestion(20)">400</a>
+        </div>
+        <div class="board100">
+          <a href="#" id="question-25" onclick="displayPopUp(), displayGeneralQuestion(25)">400</a>
+        </div>
+        
+        <div class="board200">
+          <a href="#" id="question-1" onclick="displayPopUp(), displayGeneralQuestion(1)">800</a>
+        </div>
+        <div class="board200">
+          <a href="#" id="question-6" onclick="displayPopUp(), displayGeneralQuestion(6)">800</a>
+        </div>
+        <div class="board200">
+          <a href="#" id="question-11" onclick="displayPopUp(), displayGeneralQuestion(11)">800</a>
+        </div>
+        <div class="board200">
+          <a href="#" id="question-16" onclick="displayPopUp(), displayGeneralQuestion(16)">800</a>
+        </div>
+        <div class="board200">
+          <a href="#" id="question-21" onclick="displayPopUp(), displayGeneralQuestion(21)">800</a>
+        </div>
+        <div class="board200">
+          <a href="#" id="question-26" onclick="displayPopUp(), displayGeneralQuestion(26)">800</a>
+        </div>
+
+        <div class="board300">
+          <a href="#" id="question-2" onclick="displayPopUp(), displayGeneralQuestion(2)">1200</a>
+        </div>
+        <div class="board300">
+          <a href="#" id="question-7" onclick="displayPopUp(), displayGeneralQuestion(7)">1200</a>
+        </div>
+        <div class="board300">
+          <a href="#" id="question-12" onclick="displayPopUp(), displayGeneralQuestion(12)">1200</a>
+        </div>
+        <div class="board300">
+          <a href="#" id="question-17" onclick="displayPopUp(), displayGeneralQuestion(17)">1200</a>
+        </div>
+        <div class="board300">
+          <a href="#" id="question-22" onclick="displayPopUp(), displayGeneralQuestion(22)">1200</a>
+        </div>
+        <div class="board300">
+          <a href="#" id="question-27" onclick="displayPopUp(), displayGeneralQuestion(27)">1200</a>
+        </div>
+
+        <div class="board400">
+          <a href="#" id="question-3" onclick="displayPopUp(), displayGeneralQuestion(3)">1600</a>
+        </div>
+        <div class="board400">
+          <a href="#" id="question-8" onclick="displayPopUp(), displayGeneralQuestion(8)">1600</a>
+        </div>
+        <div class="board400">
+          <a href="#" id="question-13" onclick="displayPopUp(), displayGeneralQuestion(13)">1600</a>
+        </div>
+        <div class="board400">
+          <a href="#" id="question-18" onclick="displayPopUp(), displayGeneralQuestion(18)">1600</a>
+        </div>
+        <div class="board400">
+          <a href="#" id="question-23" onclick="displayPopUp(), displayGeneralQuestion(23)">1600</a>
+        </div>
+        <div class="board400">
+          <a href="#" id="question-28" onclick="displayPopUp(), displayGeneralQuestion(28)">1600</a>
+        </div>
+
+        <div class="board500">
+          <a href="#" id="question-4" onclick="displayPopUp(), displayGeneralQuestion(4)">2000</a>
+        </div>
+        <div class="board500">
+          <a href="#" id="question-9" onclick="displayPopUp(), displayGeneralQuestion(9)">2000</a>
+        </div>
+        <div class="board500">
+          <a href="#" id="question-14" onclick="displayPopUp(), displayGeneralQuestion(14)">2000</a>
+        </div>
+        <div class="board500">
+          <a href="#" id="question-19" onclick="displayPopUp(), displayGeneralQuestion(19)">2000</a>
+        </div>
+        <div class="board500">
+          <a href="#" id="question-24" onclick="displayPopUp(), displayGeneralQuestion(24)">2000</a>
+        </div>
+        <div class="board500">
+          <a href="#" id="question-29" onclick="displayPopUp(), displayGeneralQuestion(29)">2000</a>
+        </div>
+
+    </section>
+    <br>
+    <section class="textbox">
+      <input class="textbox" type="text" id="answer" placeholder="User Input...">
+    </section>
+    <br>
+    <section class="guessPassButton">
+      <div border class="guessButton">
+        <a id="guess" href="#">Guess</a>
+      </div>
+      <div class="passButton">
+        <a id="pass" href="#">Pass</a>
+      </div>
+    </section>
+    <br>
+    <section class="score">
+      <div class="player1Score" id="player1Score">Player 1 Score: 0</div>
+      <div class="player2Score" id="player2Score">Player 2 Score: 0</div>
+    </section>
+    <br>
+    <section>
+      <div class="nextRound" id="nextRound" style="pointer-events: none;">
+        <a class="nextRoundText" id="nextRound" onclick="updateURLParams()" href="/FinalRound/final-jeopardy.html">Next Round</a>
+      </div>
+    </section>
+    <div class="pop-up" id="popUp">
+      <p id="displayQuestion"></p>
+      <button onclick="closePopUp()">Close</button>
+    </div>
+    <br>
+    <footer>
+      This is a game of Jeopardy made by Ty Benedict
+    </footer>
+    <script src="indexRound2.js" defer></script>
+  </body>
+</html>
+  </body>
+</html>

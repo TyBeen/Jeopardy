@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 37);
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+    font-size: 3em;
+    color: yellow;
+}
+
+.playerTurn {
+    text-align: center;
+    font-size: 2em;
+    margin-top: 2em;
+    color: yellow;
+}
+
+.finalCategoryContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em auto;
+    max-width: 60em;
+}
+
+.finalCategory {
+    display: flex;
+    justify-content: center;
+    border: 2px solid yellow;
+    padding: 2em 12.65em;
+    font-size: 1.75em;
+    background-color: yellow;
+    animation-name: playButton;
+    animation-duration: 5s;
+    max-width: 60em;
+}
+
+.finalQuestionContainer {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em auto;
+    max-width: 60em;
+}
+
+.finalQuestion {
+    border: 2px solid yellow;
+    padding: 2em 12.65em;
+    font-size: 1.75em;
+    color: yellow;
+}
+
+.pba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 7em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fa {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 7em;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bet {
+    display: flex;
+    border: 2px solid yellow;
+    background-color: gray;
+    margin-top: 0em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-size: 1.75em;
+    padding-right: 4em;
+    padding-left: 4em;
+}
+
+button {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+footer {
+    text-align: center;
+    margin-top: 10vw;
+    color: yellow;
+}
+
+.bettingSection {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+
+.player2Text, .player1Text {
+    color: yellow;
+}
+
+.submitButton {
+    display: flex;
+    margin-top: 3%;
+}
+
+.pop-up {
+    position: absolute;
+    width: 30em;
+    border-radius: 30px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    top: -50%;
+    left: 40.5%;
+    visibility: hidden;
+    transition: all 0.5s;
+}
+
+.questionDisplay {
+    visibility: hidden;
+}
+
+.display {
+    top: 25%;
+    visibility: visible;
+}
+
+.answered {
+    text-decoration: line-through;
+    pointer-events: none;
+    color: gray;
+}
+
+.player1Score, .player2Score {
+    display: grid;
+    grid-template-columns:9em;
+    grid-template-rows: 5em;
+    gap: 5em;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    background-color: yellow;
+    margin-bottom: 5em;
+    margin-top: 5em;
+    margin-left: 40%;
+    margin-right: 40%;
+}
+
+@media (max-width: 600px) {
+    .finalQuestionContainer {
+        max-width: 90%;
+        margin-left: 1.5em;
+        margin-right: auto;
+    }
+    
+
+    .finalCategory {
+        padding: 2em 3em;
+    }
+
+    .finalQuestion {
+        padding: 2em 3em;
+    }
+
+    .bet {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@keyframes playButton {
+    from {background-color: yellow;}
+    to {background-color: orange;}
+}

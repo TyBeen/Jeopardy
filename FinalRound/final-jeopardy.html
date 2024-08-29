@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="title">Final Jeopardy</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Final Jeopardy</h1>
+    <div class="playerTurn">Player Turn</div>
+    <br>
+    <div class="finalCategoryContainer">
+      <div class="finalCategory">
+        <a href="#" onclick="displayPopUp(), displayCategory(0)">Final Category</a>
+      </div>
+    </div>
+    <br>
+    <div class="finalQuestionContainer">
+      <div class="finalQuestion">
+        <a href="#" id="question-0" onclick="displayPopUp(), displayQuestion(0)">Final Question</a>
+      </div>
+    </div>
+    <br>
+    <section class="betting">
+      <div class="bettingSection">
+        <div class="player1Text">Player 1 Bet:</div>
+        <input type="number" id="player1Bet" placeholder="Bet amount...">
+        <div class="player1Text">Player 1 Answer:</div>
+        <input type="text" id="player1Answer" placeholder="Answer">
+      </div>
+      <div class="bettingSection">
+        <div class="player2Text">Player 2 Bet:</div>
+        <input type="number" id="player2Bet" placeholder="Bet amount..."> 
+        <div class="player2Text">Player 2 Answer:</div>
+        <input type="text" id="player2Answer" placeholder="Answer">
+      </div>
+    </section>
+    <br>
+    <button class="submitButton" onclick="submitBetsAndAnswers()">Submit Bets and Answers</button>
+    <section class="score">
+      <div class="player1Score" id="player1Score">Player 1 Score: 0</div>
+      <div class="player2Score" id="player2Score">Player 2 Score: 0</div>
+    </section>
+    <footer>
+      This is a game of Jeopardy made by Ty Benedict
+    </footer>
+    <div class="pop-up" id="popUp">
+      <p id="displayQuestion"></p>
+      <button onclick="closePopUp()">Close</button>
+    </div>
+    <script src="FinalsJeopardy.js" defer></script>
+  </body>
+</html>
