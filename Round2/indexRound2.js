@@ -268,7 +268,7 @@ let question = document.getElementById("questionLink");
 
 function displayPopUp() {
     popUpBox.classList.add("display");
-    displayNatureQuestionOne(questionIndex);
+    displayGeneralQuestion(questionIndex);
 }
 
 function closePopUp() {

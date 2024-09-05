@@ -265,7 +265,7 @@ let question = document.getElementById("questionLink");
 // Function to display and remove the pop up box
 function displayPopUp() {
     popUpBox.classList.add("display");
-    displayNatureQuestionOne(questionIndex);
+    displayGeneralQuestion(questionIndex);
 }
 
 function closePopUp() {
